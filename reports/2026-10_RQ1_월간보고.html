@@ -52,6 +52,7 @@ td:first-child{font-weight:500}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .two>div{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
 .two h4{margin:0;font-size:.98rem}
+.formula p+p{margin-top:4px}
 .formula{font-family:var(--f-body);background:var(--surface);border:1px dashed var(--line);border-radius:6px;padding:12px 16px;font-size:.95rem}
 .formula b{color:var(--accent)}
 .decide{counter-reset:d;list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
@@ -85,7 +86,7 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
   <ul class="lead">
     <li><b>토사유출 자문(상지대 이학준 교수)</b>: 국내 벌채 현장의 약 99%가 우드그랩 집재 방식이며, 하베스터·포워더는 완경사지 일부·연구용에 그침. 문헌 분석 시 <b>집재 방법을 필수 분류 항목</b>으로 추가함.</li>
     <li><b>토사유출 현장 실측 → WEPP 모형으로 전환</b>: 실트펜스 등 실측은 연구기간(우기 이후~동절기)과 예산상 실현이 어려워, 물리적 기반 모형인 WEPP로 추정함.</li>
-    <li><b>사례지</b>: 벌채 실적이 많은 국유림관리소 2곳에 정보공개 청구 예정. 소반 단위 경영이력을 받아 경과연수별 표본을 구성함.</li>
+    <li><b>사례지</b>: 산림청 국유림 목재매각실적(2020~2024) 분석 결과, 벌채 면적 상위 2곳인 <b>동부지방산림청(9,823ha)</b>과 <b>북부지방산림청(9,201ha)</b>에 정보공개를 청구함. 두 곳이 5년간 지방청 벌채 면적의 56%를 차지함.</li>
     <li><b>생물다양성</b>: 국립생태원 제5차 전국자연환경조사 자료 활용, 포유류 전문가 서면자문 여부를 검토 중이며 결정이 필요함.</li>
   </ul>
 </section>
@@ -95,8 +96,8 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
   <div class="tbl"><table>
     <thead><tr><th>착수보고서 계획</th><th>시기</th><th>현황</th><th>내용</th></tr></thead>
     <tbody>
-      <tr><td>사례지 선정(벌채이력 조회·관리소 협의)</td><td class="num">9월</td><td><span class="chip c-doing">진행</span></td><td>후보 4곳(김천·봉화·홍천·인제) 중 벌채 실적 상위 2곳 정보공개 청구 준비. 자료 수령 후 확정(→ 5장)</td></tr>
-      <tr><td>경제성 산출 자료 수집 착수</td><td class="num">9월</td><td><span class="chip c-doing">진행</span></td><td>국유림 경영비용·임목 매각단가 실증 자료 확보(홍석환·안미연, 2025, 한국환경생태학회지 39(1))</td></tr>
+      <tr><td>사례지 선정(벌채이력 조회·관리소 협의)</td><td class="num">9월</td><td><span class="chip c-doing">진행</span></td><td>목재매각실적 분석으로 청구 대상 2곳(동부·북부지방산림청) 선정, 청구서 작성 중. 자료 수령 후 관리소·소반 확정(→ 5장)</td></tr>
+      <tr><td>경제성 산출 자료 수집 착수</td><td class="num">9월</td><td><span class="chip c-doing">진행</span></td><td>국유림 경영비용·임목 매각단가 실증 자료 확보(홍석환·안미연, 2025), 국유림 목재매각실적(임업통계연보 2021~2025년판) 정리</td></tr>
       <tr><td>토사유출 전문가 자문</td><td class="num">—</td><td><span class="chip c-done">완료</span></td><td>상지대 이학준 교수 자문(집재 방식, 토양침식 모형 비교)(→ 3·4장)</td></tr>
       <tr><td>사례지 현장조사</td><td class="num">10월</td><td><span class="chip c-ask">조정 필요</span></td><td>토사유출: 실측 대신 WEPP 모형. 생물다양성: 조사 범위·자문 여부 결정 후 실시(→ 6장)</td></tr>
       <tr><td>토사유출·생물다양성 문헌 종합</td><td class="num">10월</td><td><span class="chip c-doing">진행</span></td><td>집재 방법 기준으로 토사유출 문헌을 재분류</td></tr>
@@ -244,11 +245,92 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
 </section>
 
 <section>
-  <h2>5. 사례지: 정보공개 청구 계획</h2>
-  <p>착수보고서의 1차 후보(경북 김천·봉화, 강원 홍천·인제) 중 <b>벌채 실적이 많은 국유림관리소 2곳</b>에 정보공개를 청구함. 벌채이력과 경영이력을 소반 단위로 받아, 경과연수별 비교구와 대조구를 구성하는 근거로 씀.</p>
+  <h2>5. 사례지: 벌채 실적 분석과 정보공개 청구 계획</h2>
+  <p>벌채 실적이 많은 곳일수록 경과연수가 다른 벌채지를 한 지역 안에서 고르기 쉬움. 산림청 『임업통계연보』의 국유림 목재매각실적(2021~2025년판)으로 지방산림청별 벌채 실적을 비교해 청구 대상 2곳을 정하고, 벌채이력과 경영이력을 소반 단위로 받아 경과연수별 비교구와 대조구를 구성함.</p>
 
   <div class="sub">
-    <h3>5.1 청구 항목</h3>
+    <h3>5.1 국유림 목재매각실적 추이 (전국)</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>연도</th><th>계약건수(건)</th><th>벌채면적(ha)</th><th>입목재적(㎥)</th><th>생산재적(㎥)</th><th>매각금액(억 원)</th><th>㎥당 금액(천 원)</th></tr></thead>
+      <tbody class="num">
+        <tr><td>2016</td><td>822</td><td>10,540</td><td>542,171</td><td>447,309</td><td>216.6</td><td>48.4</td></tr>
+        <tr><td>2017</td><td>967</td><td>13,684</td><td>722,043</td><td>575,358</td><td>243.9</td><td>42.4</td></tr>
+        <tr><td>2018</td><td>792</td><td>9,438</td><td>582,046</td><td>476,792</td><td>236.4</td><td>49.6</td></tr>
+        <tr><td>2019</td><td>763</td><td>8,381</td><td>635,241</td><td>487,087</td><td>204.2</td><td>41.9</td></tr>
+        <tr><td>2020</td><td>864</td><td>9,254</td><td>641,342</td><td>523,900</td><td>176.5</td><td>33.7</td></tr>
+        <tr><td>2021</td><td>837</td><td>6,620</td><td>541,241</td><td>445,996</td><td>225.4</td><td>50.5</td></tr>
+        <tr><td>2022</td><td>905</td><td>5,743</td><td>464,813</td><td>406,250</td><td>202.1</td><td>49.7</td></tr>
+        <tr><td>2023</td><td>971</td><td>5,653</td><td>543,341</td><td>471,728</td><td>177.0</td><td>37.5</td></tr>
+        <tr><td>2024</td><td>1,137</td><td>6,973</td><td>592,454</td><td>511,195</td><td>158.9</td><td>31.1</td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted">자료: 산림청 『임업통계연보』 Ⅵ-6 국유림 목재매각실적(2021~2025년판), 산림청 산림자원과. ㎥당 금액은 매각금액 ÷ 생산재적. 2023년 벌채면적 5,653ha는 홍석환·안미연(2025)이 인용한 값과 같음.</p>
+    <ul>
+      <li>국유림 벌채면적은 2017년 13,684ha를 정점으로 2022~2023년 5,700ha 안팎까지 줄었다가 2024년 6,973ha로 다시 늘었음.</li>
+      <li>계약건수는 2019년 763건에서 2024년 1,137건으로 늘어, 건당 벌채면적이 작아지는 추세임(2017년 14.2ha → 2024년 6.1ha).</li>
+      <li>매각금액은 2024년 158.9억 원으로 9년 중 가장 낮고, ㎥당 금액도 31.1천 원으로 가장 낮음.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>5.2 지방산림청별 벌채 실적과 청구 대상 선정</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>지방산림청</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>5년 합계(ha)</th><th>비중</th><th>입목재적 합계(㎥)</th><th>순위</th></tr></thead>
+      <tbody class="num">
+        <tr><td><b>동부</b></td><td>3,035</td><td>1,968</td><td>1,666</td><td>1,673</td><td>1,481</td><td><b>9,823</b></td><td>28.9%</td><td>818,149</td><td><span class="chip c-done">1</span></td></tr>
+        <tr><td><b>북부</b></td><td>2,287</td><td>1,889</td><td>1,691</td><td>1,463</td><td>1,871</td><td><b>9,201</b></td><td>27.0%</td><td>722,163</td><td><span class="chip c-done">2</span></td></tr>
+        <tr><td>남부</td><td>2,280</td><td>1,465</td><td>907</td><td>837</td><td>1,107</td><td>6,597</td><td>19.4%</td><td>421,283</td><td>3</td></tr>
+        <tr><td>서부</td><td>844</td><td>684</td><td>696</td><td>873</td><td>1,176</td><td>4,273</td><td>12.6%</td><td>435,960</td><td>4</td></tr>
+        <tr><td>중부</td><td>776</td><td>579</td><td>736</td><td>769</td><td>1,290</td><td>4,151</td><td>12.2%</td><td>363,649</td><td>5</td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted">단위: 벌채면적 ha. 각 연보의 기관별 표는 직전 연도 실적임(2021년판 → 2020년 실적). 비중은 5개 지방산림청 합계(34,044ha) 대비이며, 국립산림과학원·국립산림품종관리센터 등 소규모 기관은 제외함.</p>
+    <div class="note key">
+      <p><b>선정 결과: 동부지방산림청, 북부지방산림청</b></p>
+      <ul>
+        <li>5년 누적 벌채면적 1·2위이며, 2020~2024년 다섯 해 모두 1·2위를 지킴. 두 곳이 지방청 벌채면적의 55.9%를 차지함.</li>
+        <li>북부지방산림청 산하에는 착수보고서 1차 후보인 <b>홍천·인제 국유림관리소</b>가 있어 기존 후보 검토 내용을 그대로 쓸 수 있음.</li>
+        <li>동부지방산림청은 착수보고서 후보에 없었으므로, 청구 자료로 산하 관리소별 실적을 받아 관리소를 고름.</li>
+        <li>착수보고서 후보 중 김천(구미)·봉화(영주)는 남부지방산림청(3위) 소속임. 김천은 토사유출 문헌 조사지와 겹치는 장점이 있으나, 벌채 실적 기준으로는 우선순위에서 제외하고 예비 후보로 둠.</li>
+      </ul>
+    </div>
+    <p class="muted">선정 후 확인할 조건: 착수보고서 4장의 세 요건(경과연수 10·20·30·40년 비교구, 미벌채 대조구, 특수용도기준벌기령 적용 수종 우점)을 관리소 단위로 확인해야 함. 특히 소나무 우점 임분은 S1·S2 비교가 성립하지 않으므로, 우점 수종 정보를 청구 항목에 넣음.</p>
+  </div>
+
+  <div class="sub">
+    <h3>5.3 정보공개 청구 방법</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>구분</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>청구 기관</td><td>동부지방산림청, 북부지방산림청(기관별로 각각 청구)</td></tr>
+        <tr><td>청구 경로</td><td>정보공개포털(open.go.kr) 온라인 청구. 청구 전 각 지방청 담당 부서에 전화해 자료 보유 형태(벌채이력 DB, 경영계획서 파일)와 담당자를 확인함</td></tr>
+        <tr><td>공개 방법</td><td>전자파일(엑셀, 공간정보는 SHP)로 정보통신망 송부 요청</td></tr>
+        <tr><td>청구 범위</td><td>목재매각·벌채 이력은 보유 기간 전체(가능하면 1980년대부터). 경과연수 40년 비교구를 찾으려면 오래된 이력이 필요함</td></tr>
+        <tr><td>처리 기간</td><td>청구일로부터 10일 이내 공개 여부 결정, 부득이한 경우 10일 연장 가능(「공공기관의 정보공개에 관한 법률」 제11조)</td></tr>
+        <tr><td>부분공개 대비</td><td>매수자 상호·개인정보 등은 비공개 대상이 될 수 있음(같은 법 제9조 제1항 제6·7호). 연구에 필요 없으므로 <b>매수자 정보는 제외하고 청구</b>한다고 명시해 처리를 빠르게 함</td></tr>
+        <tr><td>청구 목적 기재</td><td>"기후변화 대응 산림정책 전환 연구의 사례지 선정 및 벌채 후 경과연수별 토사유출·생물다양성 분석"</td></tr>
+      </tbody>
+    </table></div>
+
+    <h4 style="margin:6px 0 0">청구 단계</h4>
+    <ol class="steps">
+      <li><b>1차 청구(10월 중순, 두 지방청 동시)</b>: 산하 국유림관리소별·연도별 벌채(목재매각) 실적 목록과 소반별 벌채 이력. 이 자료로 관리소와 경과연수별 소반을 고름.</li>
+      <li><b>2차 청구 또는 협조 요청(11월 초)</b>: 고른 관리소의 소반별 산림경영계획서, 임도·집재로 노선, 집재 방법. 1차 청구서에 함께 넣되, 자료량이 많아 연장되면 선정 관리소로 범위를 좁혀 다시 청구함.</li>
+    </ol>
+
+    <h4 style="margin:6px 0 0">청구 내용 문안(안)</h4>
+    <div class="formula" style="text-align:left">
+      <p>1. 귀 기관 산하 국유림관리소별 연도별 목재매각(수확벌채) 실적: 관리소, 연도, 임반·소반, 벌채 종류, 벌채 면적, 수종, 입목재적·생산재적 (보유 기간 전체, 엑셀)</p>
+      <p>2. 위 벌채지의 집재 방법(사용 장비·집재 방식)과 집재로·작업로 개설 여부 및 연장</p>
+      <p>3. 홍천·인제 국유림관리소(북부) 및 실적 상위 관리소(동부)의 소반별 산림경영계획 자료: 입지(경사·방위·토양), 임상, 영급, 우점 수종, 조림·숲가꾸기 이력</p>
+      <p>4. 위 관리소 관할 임도 노선(SHP) 및 개설 연도·연장·폭</p>
+      <p>5. 위 관리소 관할 산불·병해충 피해 이력</p>
+      <p>※ 매수자 상호, 계약 금액, 개인정보는 청구 대상에서 제외함.</p>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>5.4 청구 항목별 활용</h3>
     <div class="tbl"><table>
       <thead><tr><th>항목</th><th>세부 내용</th><th>활용</th></tr></thead>
       <tbody>
@@ -263,7 +345,7 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
   </div>
 
   <div class="sub">
-    <h3>5.2 표본 구성 방식</h3>
+    <h3>5.5 표본 구성 방식</h3>
     <ul>
       <li><b>표본 단위는 소반</b>: 임반은 면적이 매우 커서 표본 단위로 부적합함. 소반은 100ha 미만으로 나뉘므로 작은 소반을 기준으로 표본을 뜸.</li>
       <li><b>사이트 여러 곳</b>: 한 사이트가 아니라, 임도를 따라 벌채 후 경과연수가 서로 다른 소반들을 고름(예: 2017년 벌채 소반 약 9년 경과, 약 40년 전 벌채 소반).</li>
@@ -273,7 +355,7 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
   </div>
 
   <div class="sub">
-    <h3>5.3 보고서에 넣을 사례지 설명 구성</h3>
+    <h3>5.6 보고서에 넣을 사례지 설명 구성</h3>
     <p>입지 조건, 위치도, 소반별 경영이력(산림경영계획서 기반), 사례지에서 측정 가능한 변수 목록(경사·토양·임상·임도 거리 등).</p>
   </div>
 
@@ -352,7 +434,7 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
     <tbody>
       <tr><td>토사유출 검증</td><td>현장조사로 지형·침식 흔적·임도 상태 확인 후 문헌값 보정</td><td>WEPP 모의 + 국내 실측 문헌값 대조</td><td>기간(우기 이후)·예산상 실측 불가</td></tr>
       <tr><td>토사유출 문헌 분석</td><td>국외 문헌값 중심 범위값</td><td>집재 방법을 필수 분류 항목으로 추가, 국내 조건 근접 문헌 우선</td><td>자문: 국내 현장 약 99% 우드그랩</td></tr>
-      <tr><td>사례지</td><td>1개소, 9월 확정</td><td>관리소 2곳 정보공개 청구 → 소반 단위 표본, 11월 초 확정</td><td>소반별 경영이력 확보 필요</td></tr>
+      <tr><td>사례지</td><td>1개소, 9월 확정</td><td>목재매각실적 상위 2개 지방청(동부·북부) 정보공개 청구 → 관리소·소반 단위 표본, 11월 초 확정</td><td>벌채 실적이 많아야 경과연수별 비교구 확보가 쉬움, 소반별 경영이력 필요</td></tr>
       <tr><td>생물다양성</td><td>임령대별 표준지 조사 + 자연환경조사 보완</td><td>자연환경조사 × 벌채지 공간 결합 분석 중심으로 검토, 포유류 서면자문 검토</td><td>1회 현장조사로는 경과연수별 자료 확보 한계</td></tr>
     </tbody>
   </table></div>
@@ -364,7 +446,7 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
   <div class="tbl"><table>
     <thead><tr><th>시기</th><th>주요 내용</th><th>산출</th></tr></thead>
     <tbody>
-      <tr><td class="num">2026.10</td><td>정보공개 청구(2곳), WEPP 입력자료 구축 착수(기상·토양·DEM), 집재 방법 기준 문헌 재분류, 자연환경조사 자료 확보 및 사례지 후보와의 중첩 확인, 포유류 자문 여부 결정</td><td>청구서, 문헌 정리표</td></tr>
+      <tr><td class="num">2026.10</td><td>정보공개 청구(동부·북부지방산림청), WEPP 입력자료 구축 착수(기상·토양·DEM), 집재 방법 기준 문헌 재분류, 자연환경조사 자료 확보 및 사례지 후보와의 중첩 확인, 포유류 자문 여부 결정</td><td>청구서, 문헌 정리표</td></tr>
       <tr><td class="num">2026.11</td><td>정보공개 자료 수령 → 사례지 확정, WEPP 모의(경과연수·벌기령 시나리오), 생물다양성 공간분석, 경제적 최적벌기령 산출 착수</td><td>범위값 초안</td></tr>
       <tr><td class="num">2026.12</td><td>경제적 최적벌기령 산출·민감도 분석, 변경 사항 정리</td><td>중간보고</td></tr>
     </tbody>
@@ -375,12 +457,12 @@ footer{color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padd
   <h2>9. 논의·결정 요청 사항</h2>
   <ol class="decide">
     <li><div><b>토사유출 방법 변경 승인</b>: 현장 실측 대신 WEPP 모형으로 추정하고, 국내 실측 문헌값으로 대조 검증하는 방안</div></li>
-    <li><div><b>정보공개 청구 대상 2곳 확정</b>: 후보 4곳(김천·봉화·홍천·인제) 중 벌채 실적 기준 선정</div></li>
+    <li><div><b>정보공개 청구 대상 확정</b>: 목재매각실적 상위 2곳인 동부·북부지방산림청으로 청구하고, 남부(김천·봉화)는 예비 후보로 두는 방안</div></li>
     <li><div><b>국립생태원 제5차 전국자연환경조사 자료 활용 여부</b></div></li>
     <li><div><b>포유류 서면자문(한상훈 박사) 진행 여부</b>와 자문료 집행</div></li>
   </ol>
 </section>
 
-<footer>참고: 2차년도 착수보고서(RQ1, 이세음) · 이학준(상지대) 「산지토사유출 모니터링 및 모델링 기법 연구」 자문 자료 · 홍석환·안미연(2025) 「국유림 산림경영의 경제성에 대한 실증 연구」, 한국환경생태학회지 39(1): 82–89 · 이은재(2018) 「우드그랩과 가선집재 작업방법이 산림토양환경에 미치는 영향 비교 분석」, 서울대학교 박사학위논문 (<a href="https://s-space.snu.ac.kr/handle/10371/143437">S-Space</a>) · 이은재·Li·Eu·한상균·임상준(2017) 「임목생산방법에 따른 토양교란 영향 평가」, 한국산림과학회지 106(2): 204–212 · Lee et al.(2020) Heliyon 6(3): e03544 · Lee, Eu & Li(2022) Frontiers in Environmental Science 10: 756848.</footer>
+<footer>참고: 2차년도 착수보고서(RQ1, 이세음) · 이학준(상지대) 「산지토사유출 모니터링 및 모델링 기법 연구」 자문 자료 · 홍석환·안미연(2025) 「국유림 산림경영의 경제성에 대한 실증 연구」, 한국환경생태학회지 39(1): 82–89 · 이은재(2018) 「우드그랩과 가선집재 작업방법이 산림토양환경에 미치는 영향 비교 분석」, 서울대학교 박사학위논문 (<a href="https://s-space.snu.ac.kr/handle/10371/143437">S-Space</a>) · 이은재·Li·Eu·한상균·임상준(2017) 「임목생산방법에 따른 토양교란 영향 평가」, 한국산림과학회지 106(2): 204–212 · 산림청 『임업통계연보』 Ⅵ-6 국유림 목재매각실적(2021~2025년판) · Lee et al.(2020) Heliyon 6(3): e03544 · Lee, Eu & Li(2022) Frontiers in Environmental Science 10: 756848.</footer>
 
 </main>
